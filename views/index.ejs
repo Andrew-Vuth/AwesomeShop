@@ -1,0 +1,40 @@
+<!-- <div class="row">
+  <a href="./Product-page.html" target="_blank">
+    <div class="product">
+      <img src="./assets/clothes (1).png" alt="" width="50%" />
+      <div class="product-info">
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius, error?
+          Lorem ipsum dolor sit amet.
+        </p>
+        <div class="buy-item">
+          <h2>12$</h2>
+          <button class="btn cart-btn">
+            <img src="./assets/shopping-cart.png" alt="cart" />Cart
+          </button>
+        </div>
+      </div>
+    </div>
+  </a> -->
+
+<div class="products-wrapper">
+    <% products.forEach(product => { %>
+        <a href="/product/<%=  %>" target="_blank">
+            <div class="product">
+              <img src="<%= product.coverImagePath %> " alt="<%= product.name %> " width="50%" />
+              <div class="product-info">
+                  <h5><%= product.name %> </h5>
+                <p>
+                  <%= product.description %> 
+                </p>
+                <div class="buy-item">
+                  <h2><%=  %> </h2>
+                  <button class="btn cart-btn">
+                    <img src="./assets/shopping-cart.png" alt="cart" />Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+          </a>
+  <% }); %> 
+</div>

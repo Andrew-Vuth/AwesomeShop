@@ -1,0 +1,56 @@
+<div class="container">
+  <h2>Register Now</h2>
+
+  <form id="form" class="form" method="POST" action="/user/signin">
+    <%- include("./partials/message.ejs") %>
+
+    <div class="form-control">
+      <label for="username">Username</label>
+      <input
+        type="text"
+        id="username"
+        placeholder="Enter username"
+        name="username"
+        value="<%= typeof username != 'undefined' ? username:'' %>"
+      />
+      <small>Error message</small>
+    </div>
+    <div class="form-control">
+      <label for="email">Email</label>
+      <input
+        type="text"
+        id="email"
+        placeholder="Enter email"
+        name="email"
+        value="<%= typeof email != 'undefined' ? email:'' %>"
+      />
+      <small>Error message</small>
+    </div>
+    <div class="form-control">
+      <label for="password">Password</label>
+      <input
+        type="password"
+        id="password"
+        placeholder="Enter password"
+        name="password"
+        value="<%= typeof password != 'undefined' ? password:'' %>"
+      />
+      <small>Error message</small>
+    </div>
+    <div class="form-control">
+      <label for="confirm-password">Confirm Password</label>
+      <input
+        type="password"
+        id="confirm_password"
+        placeholder="Confirm your password"
+        name="confirm_password"
+        value="<%= typeof confirm_password != 'undefined' ? confirm_password:'' %>"
+      />
+      <small>Error message</small>
+    </div>
+    <button type="submit" class="button btn-submit">Submit</button>
+  </form>
+  <div class="direct-login">
+    Have an account? <a href="/user/login">Login</a>
+  </div>
+</div>
