@@ -7,7 +7,7 @@
 }
 .product_detail {
   display: grid;
-  grid-template-columns: 120px minmax(220px, 1fr);
+  grid-template-columns: 120px minmax(150px, 1fr);
   margin-bottom: 2em;
 }
 .product_detail * {
