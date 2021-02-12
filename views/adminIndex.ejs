@@ -1,14 +1,16 @@
 <h2>Recently Added Products</h2>
-<% products.forEach(product=>{%>
-<div class="product">
-  <img
-    width="150"
-    height="150"
-    src="<%= product.coverImagePath %> "
-    alt="product"
-  />
-  <div class="product_info">
-    <p><%= product.name %> <%= product.price %>$</p>
+<div class="all_products">
+  <% products.forEach(product=>{%>
+  <div class="product">
+    <img
+      width="150"
+      height="150"
+      src="<%= product.coverImagePath %> "
+      alt="product"
+    />
+    <div class="product_info">
+      <p><%= product.name %> <%= product.price %>$</p>
+    </div>
   </div>
+  <%}) %>
 </div>
-<%}) %>

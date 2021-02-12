@@ -1,0 +1,7 @@
+<h2>Edit Product</h2>
+
+<form action="/admin/products/<%= product.id %>/?_method=PUT" method="POST">
+  <%- include("_form_fields") %>
+  <a href="/admin/products/<%= product.id %>">Cancel</a>
+  <button type="submit">Update</button>
+</form>
