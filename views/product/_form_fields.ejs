@@ -1,16 +1,22 @@
-<div>
-  <label for="name">Product name</label
-  ><input type="text" name="name" value="<%= product.name %>" />
-</div>
-<div>
-  <label for="name">Product Price</label
-  ><input type="number" name="price" value="<%= product.price %>" />
-</div>
-<div>
-  <label for="name">Product Description</label>
-  <textarea type="text" name="description"><%= product.description %></textarea>
-</div>
-<div>
-  <label for="name">Product Image</label>
-  <input type="file" name="cover" class="filepond" />
+<div class="_form_container">
+  <div class="form_left">
+    <div>
+      <p>Product name</p>
+      <input type="text" name="name" value="<%= product.name %>" />
+    </div>
+    <div>
+      <p>Product Price</p>
+      <input type="number" name="price" value="<%= product.price %>" />
+    </div>
+    <div>
+      <p>Product Description</p>
+      <textarea type="text" name="description">
+<%= product.description %></textarea
+      >
+    </div>
+  </div>
+  <div class="form_right">
+    <p>Product Image</p>
+    <input type="file" name="cover" class="filepond" />
+  </div>
 </div>

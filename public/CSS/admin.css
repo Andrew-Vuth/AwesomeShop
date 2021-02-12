@@ -1,3 +1,8 @@
+:root {
+  --success: #2ecc71;
+  --error: #e74c3c;
+  --index: rgb(62, 122, 212);
+}
 * {
   padding: 0;
   margin: 0;
@@ -5,10 +10,14 @@
   font-family: "Montserrat", sans-serif;
 }
 body {
-  margin: 1.5em;
+  margin: 3em;
 }
 body a {
   text-decoration: none;
+}
+button {
+  border: 0;
+  cursor: pointer;
 }
 
 .header {
@@ -19,14 +28,116 @@ body a {
   margin: 2em 0;
 }
 
+/* Global button style */
 .btn {
-  border: 0;
   padding: 0.5em;
+  width: 80px;
+  color: #fff;
+  background-color: var(--index);
+  border-radius: 5px;
+  outline: 0;
+}
+.btn a {
+  color: #fff;
+}
+.btn_success {
+  background-color: var(--success);
+}
+.btn_danger {
+  background-color: var(--error);
+}
+.btn_dead {
+  background-color: #949494;
+}
+
+.logout_btn {
+  margin-left: 1em;
+  background-color: var(--error);
+}
+.options {
+  margin: 1em 0;
+  margin-bottom: 2em;
 }
 .options a {
+  color: #000;
   margin-right: 1em;
+  padding: 0.5em 0.8em;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+  transition: 0.2s ease;
+}
+.options a:hover {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
 }
 .all_products {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+}
+.product {
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  padding: 0.5em;
+  margin: 0.2em;
+  transform: translateY("0px");
+  transition: 0.2s ease-in;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.product_options {
+  margin: 0.2em;
+  display: flex;
+}
+.product_options .option {
+  font-size: 12px;
+  margin: 0.1em;
+  background-color: var(--success);
+  padding: 3px 5px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+}
+.product_options .option a {
+  color: #fff;
+}
+.product_options .delete {
+  background-color: var(--error);
+}
+.delete button {
+  font-size: 12px;
+  color: #fff;
+  cursor: pointer;
+  border: 0;
+  background: transparent;
+}
+
+.btn.delete_btn {
+  background-color: var(--error);
+}
+
+/* Error message */
+.errorProduct {
+  background-color: var(--error);
+  padding: 0.5em 1em;
+  color: #fff;
+  margin: 1em 0;
+  border-radius: 5px;
+  display: inline-block;
+}
+.search_product {
+  margin: 1.5em 0;
+}
+input {
+  border: 2px solid rgb(182, 182, 182);
+  outline: none;
+  padding: 0.3em;
+  font-family: "Montserrat";
+  border-radius: 5px;
+}
+input:focus {
+  border-color: rgb(62, 122, 212);
 }

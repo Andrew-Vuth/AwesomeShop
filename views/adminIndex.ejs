@@ -2,14 +2,32 @@
 <div class="all_products">
   <% products.forEach(product=>{%>
   <div class="product">
-    <img
-      width="150"
-      height="150"
-      src="<%= product.coverImagePath %> "
-      alt="product"
-    />
+    <a href="/admin/products/<%= product.id %>"
+      ><img
+        width="150"
+        height="150"
+        src="<%= product.coverImagePath %> "
+        alt="product"
+    /></a>
+
     <div class="product_info">
-      <p><%= product.name %> <%= product.price %>$</p>
+      <p><%= product.name %></p>
+    </div>
+    <div class="product_options">
+      <div class="option view">
+        <a href="/admin/products/<%= product.id %>">View</a>
+      </div>
+      <div class="option edit">
+        <a href="/admin/products/<%= product.id %>/edit">Edit</a>
+      </div>
+      <div class="option delete">
+        <form
+          action="/admin/products/<%= product.id %>?_method=DELETE"
+          method="post"
+        >
+          <button type="submit">Delete</button>
+        </form>
+      </div>
     </div>
   </div>
   <%}) %>

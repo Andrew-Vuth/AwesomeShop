@@ -156,7 +156,7 @@ async function renderFormPage(req, res, product, form, hasError = false) {
 }
 function saveCover(product, coverEncoded) {
   if (coverEncoded == null) {
-    return;
+    renderNewPage(req, res, product, true);
   }
   const cover = JSON.parse(coverEncoded);
   if (cover != null && imageMimeTypes.includes(cover.type)) {

@@ -90,7 +90,7 @@ a {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  height: 75vh;
+  /* height: 75vh; */
   padding: 0 2em;
   justify-content: center;
   /* transform: translate(-50%, -50%); */
@@ -229,23 +229,23 @@ a {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   transition: ease-in-out 0.3s;
 }
-.product:after {
+/* .product:after {
   content: "-20%";
   background-color: #ec524b;
   padding: 0.5em;
   color: #fff;
   position: absolute;
   right: -10px;
-}
+} */
 .buy-item h2 {
   position: relative;
 }
-.buy-item h2:before {
+/* .buy-item h2:before {
   content: "15$";
   color: #ec524b;
   font-size: 0.8em;
   display: block;
-}
+} */
 .buy-item h2:after {
   content: "";
   position: absolute;

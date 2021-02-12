@@ -1,0 +1,22 @@
+.product_description {
+  display: flex;
+}
+.product_description img {
+  width: 300px;
+  height: 300px;
+}
+.product_detail {
+  display: grid;
+  grid-template-columns: 120px minmax(220px, 1fr);
+  margin-bottom: 2em;
+}
+.product_detail * {
+  margin-top: 1em;
+}
+
+._show_product_options {
+  display: flex;
+}
+._show_product_options button:first-child {
+  margin-right: 0.5em;
+}

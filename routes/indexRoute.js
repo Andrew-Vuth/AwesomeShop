@@ -5,7 +5,7 @@ const Product = require("../models/product");
 
 router.get("/", async (req, res) => {
   try {
-    const products = await Product.find({}).sort({ createAt: "desc" });
+    const products = await Product.find({}).sort({ createAt: "desc" }).exec();
     res.render("index", { products: products });
   } catch (error) {}
 });

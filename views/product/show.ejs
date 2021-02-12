@@ -5,15 +5,30 @@
     width="100%"
   />
   <div class="product_info">
-    <p>Product: <%= product.name %></p>
-    <p>Description: <%= product.description %></p>
-    <p>Price: $<%= product.price %></p>
-  </div>
-</div>
+    <div class="product_detail">
+      <div style="font-weight: bold">
+        <div>Product:</div>
+        <div>Description:</div>
+        <div>Price:</div>
+      </div>
 
-<div class="product_options">
-  <a href="/admin/products/<%= product.id %>/edit">Edit</a>
-  <form action="/admin/products/<%= product.id %>?_method=DELETE" method="post">
-    <button type="submit">Delete</button>
-  </form>
+      <div>
+        <p><%= product.name %></p>
+        <p><%= product.description %></p>
+        <p>$<%= product.price %></p>
+      </div>
+    </div>
+
+    <div class="_show_product_options">
+      <button class="btn btn_success">
+        <a href="/admin/products/<%= product.id %>/edit">Edit</a>
+      </button>
+      <form
+        action="/admin/products/<%= product.id %>?_method=DELETE"
+        method="post"
+      >
+        <button type="submit" class="btn btn_danger">Delete</button>
+      </form>
+    </div>
+  </div>
 </div>

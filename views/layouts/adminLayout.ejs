@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Admin Dashboard</title>
     <link rel="stylesheet" href="/CSS/admin.css" />
+    <link rel="stylesheet" href="/CSS/show.css" />
+    <link rel="stylesheet" href="/CSS/newProduct.css" />
     <link
       href="https://unpkg.com/filepond/dist/filepond.css"
       rel="stylesheet"
@@ -34,7 +36,18 @@
   <body>
     <div class="header">
       <h3>Dashboard</h3>
-      <button class="btn logout_btn"><a href="/user/logout">Log out</a></button>
+      <div class="header_right">
+        <a
+          href="/"
+          style="background-color: #8d8d8d; padding: 0.3em; border-radius: 5px"
+        >
+          <span style="color: #fff; font-weight: bold">Awesome</span>
+          <span style="color: green; font-weight: bold">Shop</span>
+        </a>
+        <button class="btn logout_btn">
+          <a href="/user/logout">Log out</a>
+        </button>
+      </div>
     </div>
     <div class="welcome"><h1>Welcome, <%= user %>!</h1></div>
 

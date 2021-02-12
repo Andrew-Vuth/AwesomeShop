@@ -2,6 +2,8 @@
 
 <form action="/admin/products/<%= product.id %>/?_method=PUT" method="POST">
   <%- include("_form_fields") %>
-  <a href="/admin/products/<%= product.id %>">Cancel</a>
-  <button type="submit">Update</button>
+  <a href="/admin/products/<%= product.id %>"
+    ><button class="btn btn_dead">Cancel</button>
+  </a>
+  <button type="submit" class="btn">Update</button>
 </form>

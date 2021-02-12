@@ -39,6 +39,7 @@ router.post("/signin", async (req, res) => {
     }
 
     if (errors.length > 0) {
+      console.log(errors);
       res.render("signIn", {
         layout: "./layouts/authLayout",
         errors,

@@ -1,3 +1,5 @@
+// Check if there's an user middleware
+
 function authUser(req, res, next) {
   if (req.isAuthenticated()) {
     return next();
@@ -7,6 +9,8 @@ function authUser(req, res, next) {
     res.redirect("/user/login");
   }
 }
+
+// Check role middleware
 
 function authRole(role) {
   return (req, res, next) => {
