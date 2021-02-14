@@ -20,4 +20,9 @@ This is an assignment work of Internet Programming course that is taught by Mr. 
 4. User can comment on the product section
 5. User can add product to cart
 
+# Admin account:
+- email: admin@gmail.com
+- password: admin12345678
+
+
 
